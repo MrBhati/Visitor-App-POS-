@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_marginTop="400dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/purple_500"
+            android:layout_centerHorizontal="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/visit_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/visit_image_test"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="120dp"
+                android:src="@drawable/usericon"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/visit_visitor_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/visit_image_test"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Surendra Singh Bhati"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visitor_number_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/visit_visitor_name_tv"
+        >
+
+        <ImageView
+            android:id="@+id/mobile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/mobile" />
+
+        <TextView
+            android:id="@+id/visitor_mobile_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/mobile_icon"
+            android:text="+91 7021914186"
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/email_card"-->
+<!--        android:layout_below="@id/visitor_number_card"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:padding="4dp"-->
+<!--            android:id="@+id/email_icon"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/email"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/visit_visitor_email_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_toEndOf="@+id/email_icon"-->
+<!--            android:text="mrbhatisurendra@gmail.com"-->
+<!--            android:textSize="16dp"-->
+
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/visit_id_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/visitor_number_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/visit_id_icon"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/visit" />
+
+        <TextView
+            android:id="@+id/visit_id_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/visit_id_icon"
+
+            android:text="Visit Code:"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/visit_id_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/visit_id_tv"
+            android:text="MOK869NJIKFN85"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visit_department_card"
+        android:layout_below="@id/visit_id_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/visit_department_icon"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_department" />
+
+        <TextView
+            android:id="@+id/visit_department_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/visit_department_icon"
+            android:text="Visit Department"
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visit_designation_card"
+        android:layout_below="@id/visit_department_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/visit_designation_icon"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_designation" />
+
+        <TextView
+            android:id="@+id/visit_designation_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/visit_designation_icon"
+            android:text="Visit Designation"
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/purpose_visit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/visit_designation_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/purpose_visit_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_reason" />
+
+        <TextView
+            android:id="@+id/purpose_visit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/purpose_visit_icon"
+            android:text="This article aims to tell and show how to “Send the data from one activity to second activity using Intent”. In this example, we have two activities, activity_first which is the source activity, and activity_second which is the destination activity."
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/last_update_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purpose_visit_card"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/last_update_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:text="Visited On:"
+
+            android:textSize="18dp"
+
+            />
+
+        <TextView
+            android:id="@+id/last_update_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/last_update_tv"
+            android:text="17/09/2022 11:55 AM"
+            android:textSize="18dp"
+
+            />
+
+    </RelativeLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/created_card"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/last_update_card"-->
+
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/created_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:text="Visitor Created At"-->
+
+<!--            android:textSize="18dp"-->
+
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/created_value_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_toEndOf="@+id/created_tv"-->
+<!--            android:text="17/09/2022 11:55 AM"-->
+<!--            android:textSize="18dp"-->
+
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/last_update_card"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:layout_marginBottom="40dp">
+
+
+                <Button
+                    android:id="@+id/print_visit_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="Print Details"
+
+                    />
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

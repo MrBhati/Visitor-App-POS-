@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mrbhati.vizitors">
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcherl"
+        android:label="@string/app_name"
+
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vizitors"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ui.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ui.Login"
+            android:exported="true"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.AddVisit"
+            android:exported="true"
+            android:label="@string/add_visit">
+        </activity>
+        <activity
+            android:name=".ui.EditVisitor"
+            android:exported="true"
+            android:label="@string/update_viditor">
+        </activity>
+
+        <activity
+            android:name=".ui.VisitorDetails"
+            android:exported="true"
+            android:label="@string/title_activity_visitor_details">
+        </activity>
+
+
+        <activity
+            android:name=".ui.VisitDestails"
+            android:exported="true"
+            android:label="@string/title_activity_visit_details">
+        </activity>
+<!--        <activity-->
+<!--            android:name=".ui.Login"-->
+<!--            android:theme="@android:style/Theme.NoTitleBar"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/title_activity_login">-->
+<!--        </activity>-->
+
+
+    </application>
+
+</manifest>

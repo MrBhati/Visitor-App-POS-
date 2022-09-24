@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+
+        <ImageView
+            android:id="@+id/visit_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/usericon" />
+
+        <TextView
+            android:id="@+id/visit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/visit_img"
+            android:gravity="center_vertical"
+            android:text="Visitor Full Name"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/visit_mobile"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visit_name"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/visit_img"
+            android:text="Visitor Mobile Number"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/visit_society"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visit_mobile"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/visit_img"
+            android:text="Visitor Society"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/visit_count"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visit_society"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="-21dp"
+            android:layout_marginRight="2dp"
+            android:layout_toEndOf="@id/visit_mobile"
+            android:layout_toRightOf="@id/visit_img"
+            android:text="Count"
+            android:textSize="14dp" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/visit_create_date"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/visit_img"-->
+<!--            android:layout_marginStart="2dp"-->
+<!--            android:layout_marginLeft="8dp"-->
+<!--            android:layout_marginTop="10dp"-->
+
+<!--            android:text="Crated Date"-->
+<!--            android:textSize="14dp" />-->
+        <TextView
+            android:id="@+id/list_visit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visit_society"
+            android:layout_marginTop="8dp"
+            android:text="Crated Date"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_margin="5dp"-->
+    <!--    app:cardBackgroundColor="@color/white"-->
+    <!--    app:cardCornerRadius="8dp"-->
+    <!--    app:cardElevation="8dp"-->
+    <!--    app:cardMaxElevation="10dp"-->
+    <!--    app:cardPreventCornerOverlap="true"-->
+    <!--    app:cardUseCompatPadding="true">-->
+    <!--<RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/idIVCourseImage"-->
+    <!--            android:layout_width="100dp"-->
+    <!--            android:layout_height="100dp"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:contentDescription="@string/app_name"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:src="@drawable/ic_notifications_black_24dp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/visitor_full_name"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_toEndOf="@id/idIVCourseImage"-->
+    <!--            android:text="Full name"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/visitor_number"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/visitor_full_name"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_toEndOf="@id/idIVCourseImage"-->
+    <!--            android:text="@string/visitor_number"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/visitor_society"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_below="@+id/visitor_number"-->
+    <!--            android:layout_toEndOf="@id/idIVCourseImage"-->
+    <!--            android:text="@string/visitor_society"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/visitor_created_at"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_below="@+id/visitor_society"-->
+    <!--            android:layout_toEndOf="@id/idIVCourseImage"-->
+    <!--            android:text="@string/visitor_created_at"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/visitor_count"-->
+    <!--            android:layout_width="94dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/visitor_society"-->
+    <!--            android:layout_alignParentEnd="true"-->
+    <!--            android:layout_marginStart="39dp"-->
+    <!--            android:layout_marginEnd="10dp"-->
+    <!--            android:layout_toEndOf="@id/visitor_created_at"-->
+    <!--            android:text="@string/visitor_count"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:textStyle="bold" />-->
+
+
+    <!--    </RelativeLayout>-->
+    <!--</androidx.cardview.widget.CardView>-->

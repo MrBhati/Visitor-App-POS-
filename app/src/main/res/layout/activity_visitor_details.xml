@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar_visitor"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/purple_500"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/visitor_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/visitor_image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="120dp"
+            android:src="@drawable/usericon"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visitor_number_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/visitor_name_tv"
+        >
+
+        <ImageView
+            android:id="@+id/mobile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/mobile" />
+
+        <TextView
+            android:id="@+id/visitor_mobile_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/mobile_icon"
+            android:text="+91 7021914186"
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/email_card"-->
+<!--        android:layout_below="@id/visitor_number_card"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:padding="4dp"-->
+<!--            android:id="@+id/email_icon"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/email"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/visitor_email_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_toEndOf="@+id/email_icon"-->
+<!--            android:text="mrbhatisurendra@gmail.com"-->
+<!--            android:textSize="16dp"-->
+
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_visit_card"
+        android:layout_below="@id/visitor_society_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/totoal_visit_icon"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/visit" />
+
+        <TextView
+            android:id="@+id/totol_visit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/totoal_visit_icon"
+            android:text="Total Visit"
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/visitor_society_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/visitor_number_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/society_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/type" />
+
+        <TextView
+            android:id="@+id/visitor_society_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/society_icon"
+            android:text="Visitor Society"
+            android:textSize="16dp"
+
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/visitor_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/visitor_image"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Surendra Singh Bhati"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/visitor_edti_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visitor_society_card"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="110dp"
+
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="110dp"
+            android:text="Edit Details" />
+
+
+    <RelativeLayout
+        android:id="@+id/created_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/last_update_card"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/created_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="3dp"
+            android:text="Visitor Created At"
+
+            android:textSize="18dp"
+
+            />
+
+        <TextView
+            android:id="@+id/created_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/created_tv"
+            android:text="17/09/2022 11:55 AM"
+            android:textSize="18dp"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/last_update_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/visitor_edti_btn"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/last_update_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="3dp"
+            android:text="Last Visited At:"
+
+            android:textSize="18dp"
+
+            />
+
+        <TextView
+            android:id="@+id/last_update_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/last_update_tv"
+            android:text="17/09/2022 11:55 AM"
+            android:textSize="18dp"
+
+            />
+
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

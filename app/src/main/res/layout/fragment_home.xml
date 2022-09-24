@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar_home"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/purple_500"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@+id/home_ui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/today_visit_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+   android:layout_marginTop="20dp"
+      android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="fill_horizontal"
+            android:padding="8dp">
+
+
+            <ImageView
+                android:id="@+id/vesit_img1"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/visit" />
+
+            <TextView
+                android:id="@+id/today_visit_tv"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/today_visit_tv"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/vesit_img1"
+                android:gravity="center_vertical"
+                android:text="Today's Visits"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/today_visit_count_tv"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="-32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toRightOf="@id/today_visit_tv"
+                android:text="100"
+                android:textAlignment="textEnd"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weeks_visits_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:padding="30dp"
+        android:layout_below="@id/today_visit_card"
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="fill_horizontal"
+            android:padding="8dp">
+
+
+            <ImageView
+                android:id="@+id/visit_img2"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/visit" />
+
+            <TextView
+                android:id="@+id/week_visit_tv"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/week_visit_tv"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/visit_img2"
+                android:gravity="center_vertical"
+                android:text="This Weeks Visits"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/week_visit_count_tv"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@id/week_visit_tv"
+                android:text="400"
+                android:textAlignment="textEnd"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totol_visits_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:padding="30dp"
+        android:layout_below="@id/weeks_visits_card"
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="fill_horizontal"
+            android:padding="8dp">
+
+
+            <ImageView
+                android:id="@+id/visit_img3"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/visit" />
+
+            <TextView
+                android:id="@+id/total_visit_tv"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/total_visit_tv"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/visit_img3"
+                android:gravity="center_vertical"
+                android:text="Total Visits"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_visit_count_tv"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@id/total_visit_tv"
+                android:text="1000"
+                android:textAlignment="textEnd"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totol_visitors_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:layout_below="@+id/totol_visits_card"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="fill_horizontal"
+            android:padding="8dp">
+
+
+            <ImageView
+                android:id="@+id/totol_visitors_img"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/visitor_icon" />
+
+            <TextView
+                android:id="@+id/totol_visitors_tv"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/totol_visitors_tv"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/totol_visitors_img"
+                android:gravity="center_vertical"
+                android:text="Total Visitors"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totol_visitors_count_tv"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@id/totol_visitors_tv"
+                android:text="190"
+                android:textAlignment="textEnd"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/addvisits_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/totol_visitors_card"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="80dp"
+            android:gravity="center"
+            android:text="+ ADD VISIT"></Button>
+</RelativeLayout>
+
+</RelativeLayout>
