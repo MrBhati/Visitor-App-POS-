@@ -195,39 +195,37 @@ reset_btn.setOnClickListener(new View.OnClickListener(){
     private void printRecipt(String code){
         Print.init(AddVisit.this);
         Print.StartPrinting("VISIT ID: "+code, FontLattice.THIRTY, true, Align.CENTER, true);
-        Print.StartPrinting();
-        if(photo != null){
-            Bitmap b = Bitmap.createScaledBitmap(photo, 410, 550, false);
-            Print.StartPrintingImage(b, Align.CENTER);
-        }else{
-            Bitmap icon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.usericon);
-            Bitmap b = Bitmap.createScaledBitmap(icon, 400, 400, false);
-//                Bitmap icon = photo;
-            Print.StartPrintingImage(b, Align.CENTER);
-        }
-        Print.StartPrinting();
-        Print.StartPrinting("Name of Visitor:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+//        Print.StartPrinting();
+//        if(photo != null){
+//            Bitmap b = Bitmap.createScaledBitmap(photo, 410, 550, false);
+//            Print.StartPrintingImage(b, Align.CENTER);
+//        }else{
+//            Bitmap icon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.usericon);
+//            Bitmap b = Bitmap.createScaledBitmap(icon, 400, 400, false);
+////                Bitmap icon = photo;
+//            Print.StartPrintingImage(b, Align.CENTER);
+//        }
+//        Print.StartPrinting();
+        Print.StartPrinting("Name of Visitor:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
         Print.StartPrinting(name_et.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
-        Print.StartPrinting("Mobile Number:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+        Print.StartPrinting("Mobile Number:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
         Print.StartPrinting(number_et.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
-        Print.StartPrinting("Purpose/Visit Reason:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+        Print.StartPrinting("Purpose/Visit Reason:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
         Print.StartPrinting(purpose_et.getText().toString(), FontLattice.TWENTY_TWO, true, Align.LEFT, true);
-        Print.StartPrinting("Visited To:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+        Print.StartPrinting("Visited To:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
         if(departmentSelected != null){
             Print.StartPrinting(departmentSelected.toString(), FontLattice.THIRTY, true, Align.LEFT, true);
-        }else {
-            Print.StartPrinting("City Survey Department", FontLattice.THIRTY, true, Align.LEFT, true);
         }
 
-        Print.StartPrinting("Visit Date and time:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+        Print.StartPrinting("Visit Date and time:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
         //  Print.StartPrinting(visit_at_tv.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
         Print.StartPrinting(datetime+"", FontLattice.THIRTY, true, Align.LEFT, true);
         Print.StartPrinting("********************************");
         Bitmap logo_icon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.printlogo1);
-        Bitmap b_print = Bitmap.createScaledBitmap(logo_icon, 200, 160, false);
+        Bitmap b_print = Bitmap.createScaledBitmap(logo_icon, 180, 130, false);
 
         Print.StartPrintingImage(b_print, Align.CENTER);
-        Print.StartPrinting("Slum Rehabilitation Authority",FontLattice.EIGHTEEN, true, Align.CENTER, true);
+        Print.StartPrinting("Slum Rehabilitation Authority",FontLattice.TWENTY_TWO, true, Align.CENTER, true);
         Print.StartPrinting();
         Print.StartPrinting();
         Print.StartPrinting();

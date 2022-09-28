@@ -23,6 +23,7 @@ import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface Api {
 
@@ -45,12 +46,12 @@ public interface Api {
 
     @GET("visits")
     @Headers({"Content-Type: application/json","Accept: application/json"})
-    Call<VisitModel> getVisits(@Header("Authorization") String token);
+    Call<VisitModel> getVisits(@Header("Authorization") String token,@Query("page") int currentPage);
 
 
     @GET("visitors")
     @Headers({"Content-Type: application/json","Accept: application/json"})
-    Call<VisitorModel> getVisitors(@Header("Authorization") String token);
+    Call<VisitorModel> getVisitors(@Header("Authorization") String token,@Query("page") int currentPage);
 
     @GET("dashboard")
     @Headers({"Content-Type: application/json","Accept: application/json"})

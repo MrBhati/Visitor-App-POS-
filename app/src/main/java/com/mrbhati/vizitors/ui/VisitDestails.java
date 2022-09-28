@@ -80,27 +80,26 @@ public class VisitDestails extends AppCompatActivity {
 ////                Bitmap icon = photo;
 //                    Print.StartPrintingImage(b, Align.CENTER);
 
-                Print.StartPrinting();
-                Print.StartPrinting("Name of Visitor:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+
+                Print.StartPrinting("Name of Visitor:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
                 Print.StartPrinting(name_tv.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
-                Print.StartPrinting("Mobile Number:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+                Print.StartPrinting("Mobile Number:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
                 Print.StartPrinting(mobile_tv.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
-                Print.StartPrinting("Purpose/Visit Reason:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+                Print.StartPrinting("Purpose/Visit Reason:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
                 Print.StartPrinting(reason_tv.getText().toString(), FontLattice.TWENTY_TWO, true, Align.LEFT, true);
                 Print.StartPrinting("Visited To:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
 
                     Print.StartPrinting(department_tv.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
 
 
-                Print.StartPrinting("Visit Date and time:",FontLattice.EIGHTEEN, true, Align.LEFT, true);
+                Print.StartPrinting("Visit Date and time:",FontLattice.TWENTY_TWO, true, Align.LEFT, true);
                 //  Print.StartPrinting(visit_at_tv.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
                 Print.StartPrinting(visit_at_tv.getText().toString(), FontLattice.THIRTY, true, Align.LEFT, true);
                 Print.StartPrinting("********************************");
                 Bitmap logo_icon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.printlogo1);
-                Bitmap b_print = Bitmap.createScaledBitmap(logo_icon, 200, 160, false);
-
+                Bitmap b_print = Bitmap.createScaledBitmap(logo_icon, 180, 130, false);
                 Print.StartPrintingImage(b_print, Align.CENTER);
-                Print.StartPrinting("Slum Rehabilitation Authority",FontLattice.EIGHTEEN, true, Align.CENTER, true);
+                Print.StartPrinting("Slum Rehabilitation Authority",FontLattice.TWENTY_TWO, true, Align.CENTER, true);
                 Print.StartPrinting();
                 Print.StartPrinting();
                 Print.StartPrinting();

@@ -128,8 +128,14 @@ public class VisitorDetails  extends AppCompatActivity {
 
     }
     public static String getFormatDate(Date date){
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-        return format.format(date);
+        if(date!= null){
+            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
+            return format.format(date);
+        }else {
+            return "N/A";
+        }
+
+
     }
 
 }

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idNestedSV"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 
 tools:context=".ui.notifications.NotificationsFragment">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <ProgressBar
         android:id="@+id/progressBar_notification"
         style="?android:attr/progressBarStyleLarge"
@@ -22,4 +27,10 @@ tools:context=".ui.notifications.NotificationsFragment">
         android:id="@+id/recview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</RelativeLayout>
+        <ProgressBar
+            android:id="@+id/idPBLoading"
+            android:layout_width="match_parent"
+            android:indeterminateTint="@color/purple_500"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
