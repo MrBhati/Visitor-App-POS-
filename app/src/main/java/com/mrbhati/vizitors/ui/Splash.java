@@ -21,6 +21,7 @@ import com.mrbhati.vizitors.Model.LoginResponse;
 import com.mrbhati.vizitors.Model.UserRequest;
 import com.mrbhati.vizitors.R;
 import com.mrbhati.vizitors.services.RetrofitClient;
+import com.mrbhati.vizitors.utils.InternetConnection;
 
 import java.util.regex.Pattern;
 
@@ -48,6 +49,14 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 Log.d("TOKEN","Token:" +token);
+
+                if (InternetConnection.checkConnection(Splash.this)) {
+
+                } else {
+                    Toast.makeText(Splash.this, "Internet Not Available", Toast.LENGTH_SHORT).show();
+                    // Internet Not Available...
+                }
+
                 if(token != ""){
                     Intent i=new Intent(Splash.this,
                             MainActivity.class);
@@ -57,7 +66,6 @@ public class Splash extends AppCompatActivity {
                             Login.class);
                     startActivity(i);
                 }
-
                 finish();
             }
         }, SPLASH_SCREEN_TIME_OUT);

@@ -22,10 +22,12 @@ public class RetrofitClient {
     public RetrofitClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+      //  OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        //
+        OkHttpClient client = UnsafeOkHttpClient.getUnsafeOkHttpClient();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://myvizitors.pageinfo.in/api/")
+                .baseUrl("https://myvizitors.pageinfo.in/api/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

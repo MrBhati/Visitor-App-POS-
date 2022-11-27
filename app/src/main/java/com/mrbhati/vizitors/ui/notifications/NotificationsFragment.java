@@ -21,6 +21,7 @@ import com.mrbhati.vizitors.R;
 import com.mrbhati.vizitors.adapters.myadapter;
 import com.mrbhati.vizitors.services.RetrofitClient;
 import com.mrbhati.vizitors.ui.VisitorDetails;
+import com.mrbhati.vizitors.utils.InternetConnection;
 import com.mrbhati.vizitors.utils.VistClickListener;
 
 import java.util.ArrayList;
@@ -80,7 +81,16 @@ public class NotificationsFragment extends Fragment implements VistClickListener
 
                     // on below line we are making our progress bar visible.
                     loadingPB.setVisibility(View.VISIBLE);
-                    getVisits(token);
+
+                    if (InternetConnection.checkConnection(getContext())) {
+                       // Toast.makeText(getContext(), "Internet Available...", Toast.LENGTH_SHORT).show();
+                        // Internet Available...
+                        getVisits(token);
+                    } else {
+                        Toast.makeText(getContext(), "Internet Not Available", Toast.LENGTH_SHORT).show();
+                        // Internet Not Available...
+                    }
+
                 }
             }
         });

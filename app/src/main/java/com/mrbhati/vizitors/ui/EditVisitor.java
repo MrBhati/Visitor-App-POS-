@@ -36,6 +36,7 @@ package com.mrbhati.vizitors.ui;
         import com.mrbhati.vizitors.adapters.myadapter;
         import com.mrbhati.vizitors.services.RetrofitClient;
         import com.mrbhati.vizitors.ui.notifications.NotificationsFragment;
+        import com.mrbhati.vizitors.utils.InternetConnection;
         import com.mswipetech.wisepad.sdk.Print;
         import com.socsi.smartposapi.printer.Align;
         import com.socsi.smartposapi.printer.FontLattice;
@@ -124,7 +125,16 @@ public class EditVisitor extends AppCompatActivity {
                         PhotoUrl
                 );
 
-                updateVisitor(updateVisitorRequest, visitor_id);
+
+                if (InternetConnection.checkConnection(EditVisitor.this)) {
+                   // Toast.makeText(EditVisitor.this, "Internet Available...", Toast.LENGTH_SHORT).show();
+                    // Internet Available...
+                    updateVisitor(updateVisitorRequest, visitor_id);
+                } else {
+                    Toast.makeText(EditVisitor.this, "Internet Not Available", Toast.LENGTH_SHORT).show();
+                    // Internet Not Available...
+                }
+
             }
         });
 

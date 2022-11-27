@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -22,7 +23,12 @@ import com.mrbhati.vizitors.R;
 import com.mrbhati.vizitors.adapters.VisitsAdapter;
 import com.mrbhati.vizitors.services.RetrofitClient;
 import com.mrbhati.vizitors.ui.AddVisit;
+import com.mrbhati.vizitors.ui.Testprint;
 import com.mrbhati.vizitors.ui.dashboard.DashboardFragment;
+import com.mrbhati.vizitors.utils.InternetConnection;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -49,9 +55,18 @@ public class HomeFragment extends Fragment {
         totol_visitors_count_tv = view.findViewById(R.id.totol_visitors_count_tv);
         relativeLayout.setVisibility(View.GONE);
         pref = this.getActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE);
-        token=pref.getString("token", "16|HIxSsdnc3u9pT1OYqacJ7a3HERGjdnTNnTPlszUK");
+        token=pref.getString("token", "");
 
-        getHomeData(token);
+
+        if (InternetConnection.checkConnection(getContext())) {
+           // Toast.makeText(getContext(), "Internet Available...", Toast.LENGTH_SHORT).show();
+            // Internet Available...
+            getHomeData(token);
+        } else {
+            Toast.makeText(getContext(), "Internet Not Available", Toast.LENGTH_SHORT).show();
+            // Internet Not Available...
+        }
+
 
 
 
@@ -78,7 +93,14 @@ public class HomeFragment extends Fragment {
         Log.d("RESUME ", "FREGEMENT REFRASH");
         progressBar.setVisibility(View.VISIBLE);
         relativeLayout.setVisibility(View.GONE);
-        getHomeData(token);
+        if (InternetConnection.checkConnection(getContext())) {
+            // Toast.makeText(getContext(), "Internet Available...", Toast.LENGTH_SHORT).show();
+            // Internet Available...
+            getHomeData(token);
+        } else {
+            Toast.makeText(getContext(), "Internet Not Available", Toast.LENGTH_SHORT).show();
+            // Internet Not Available...
+        }
     }
 
 
@@ -111,7 +133,7 @@ public class HomeFragment extends Fragment {
 
 
         void openAddVisit() {
-        Intent intent = new Intent(getActivity(), AddVisit.class);
+        Intent intent = new Intent(getActivity(), Testprint.class);
         startActivity(intent);
     }
 

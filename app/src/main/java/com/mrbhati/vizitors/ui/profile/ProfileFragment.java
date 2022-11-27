@@ -9,6 +9,7 @@ package com.mrbhati.vizitors.ui.profile;
         import android.view.ViewGroup;
         import android.widget.Button;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import androidx.annotation.NonNull;
         import androidx.fragment.app.Fragment;
@@ -18,6 +19,7 @@ package com.mrbhati.vizitors.ui.profile;
         import com.mrbhati.vizitors.R;
         import com.mrbhati.vizitors.databinding.FragmentDashboardBinding;
         import com.mrbhati.vizitors.ui.Login;
+        import com.mrbhati.vizitors.utils.InternetConnection;
 
         import java.text.ParseException;
         import java.text.SimpleDateFormat;
@@ -69,6 +71,15 @@ public class ProfileFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
+
+            if (InternetConnection.checkConnection(getContext())) {
+             //   Toast.makeText(getContext(), "Internet Available...", Toast.LENGTH_SHORT).show();
+                // Internet Available...
+                logOut();
+            } else {
+                Toast.makeText(getContext(), "Internet Not Available", Toast.LENGTH_SHORT).show();
+                // Internet Not Available...
+            }
             logOut();
         }
     });

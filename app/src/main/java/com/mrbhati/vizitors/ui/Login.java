@@ -19,6 +19,7 @@ import com.mrbhati.vizitors.Model.UserRequest;
 import com.mrbhati.vizitors.R;
 import com.mrbhati.vizitors.services.ApiInterface;
 import com.mrbhati.vizitors.services.RetrofitClient;
+import com.mrbhati.vizitors.utils.InternetConnection;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -47,7 +48,17 @@ public class Login   extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isValidEmailId(email_et.getText().toString().trim())){
-                    loginUser();
+
+                    if (InternetConnection.checkConnection(Login.this)) {
+                        //Toast.makeText(Login.this, "Internet Available...", Toast.LENGTH_SHORT).show();
+                        // Internet Available...
+                        loginUser();
+
+                    } else {
+                        Toast.makeText(Login.this, "Internet Not Available", Toast.LENGTH_SHORT).show();
+                        // Internet Not Available...
+                    }
+
                     //  Toast.makeText(getApplicationContext(), "Valid Email Address.", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplicationContext(), "InValid Email Address.", Toast.LENGTH_SHORT).show();

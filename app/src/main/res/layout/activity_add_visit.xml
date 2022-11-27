@@ -23,186 +23,201 @@
         android:layout_centerHorizontal="true" />
 
 
-
-    <RelativeLayout android:id="@+id/form_ui"
+    <RelativeLayout
+        android:id="@+id/form_ui"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/visit_image_camera"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="120dp"
-        android:src="@drawable/usericon"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp" />
+        android:layout_height="match_parent">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/add_image_icon"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/visit_image_camera"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:src="@drawable/usericon"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignRight="@id/visit_image_camera"
-        android:layout_alignBottom="@+id/visit_image_camera"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:src="@drawable/click_photo"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="0dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/add_image_icon"
 
-
-    <TextView
-        android:id="@+id/personal_info_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/visit_image_camera"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:text="PERSONAL DETAILS"
-        android:textSize="18dp"
-        />
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/visit_image_camera"
+            android:layout_alignBottom="@+id/visit_image_camera"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/click_photo"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Enter Full Name"
-        android:inputType="text|textMultiLine"
-        android:layout_below="@+id/personal_info_tv"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/name_et_et"
+        <TextView
+            android:id="@+id/personal_info_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            /></com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@id/visit_image_camera"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="PERSONAL DETAILS"
+            android:textSize="18dp" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobile_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Enter Mobile number"
-        android:inputType="text|textMultiLine"
-        android:layout_below="@+id/name_et"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:layout_below="@+id/personal_info_tv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Enter Mobile Number* / उद्देश/भेटीचे कारण प्रविष्ट करा"
+            android:inputType="text|textMultiLine">
 
-            android:maxLength="10"
-            android:id="@+id/mobile_et_et"
-            /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobile_et_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="number"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/search_visit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/mobile_et"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Search Visitor"
+
+            />
 
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/socity_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Enter Society/Company"
-        android:inputType="text|textMultiLine"
-        android:layout_below="@+id/mobile_et"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/society_et_et"
-            /></com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/search_visit"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Enter Full Name*/पूर्ण नाव प्रविष्ट करा"
+            android:inputType="text"
+            android:maxLines="1">
 
-    <TextView
-        android:id="@+id/other_info_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/socity_et"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="OTHER DETAILS"
-        android:textSize="18dp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_et_et"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/select_department_dd"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_below="@id/other_info_tv"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Select Department">
-
-        <AutoCompleteTextView
-            android:id="@+id/AutoCompleteTextview"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/socity_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none" />
+            android:layout_below="@+id/name_et"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Enter Society/Company*/सोसायटी/कंपनी प्रविष्ट करा"
+            android:inputType="text"
+            android:maxLines="1">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/society_et_et"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/visit_reason"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Purpose/ Visit Reason"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="25dp"
-        android:inputType="text|textMultiLine"
-        android:layout_below="@+id/select_department_dd"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <TextView
+            android:id="@+id/other_info_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/socity_et"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="OTHER DETAILS"
+            android:textSize="18dp" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/purpose_et_et"
-        /></com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/select_department_dd"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_info_tv"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Select Department*/विभाग निवडा">
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/visit_reason"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="40dp">
+            <AutoCompleteTextView
+                android:id="@+id/AutoCompleteTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
 
-    <Button
-        android:id="@+id/reset_btn"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="Reset" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/save_btn"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_toEndOf="@id/reset_btn"
-        android:text="Save and Print"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/visit_reason"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_department_dd"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="25dp"
+            android:hint="Enter Purpose/ Visit Reason/*उद्देश/भेटीचे कारण प्रविष्ट करा"
+            android:inputType="text|textMultiLine">
 
-        />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/purpose_et_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</RelativeLayout>
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/visit_reason"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:id="@+id/reset_btn"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Reset" />
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/reset_btn"
+                android:text="Save and Print"
+
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>
 
 

@@ -248,7 +248,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/purpose_visit_icon"
-            android:text="This article aims to tell and show how to “Send the data from one activity to second activity using Intent”. In this example, we have two activities, activity_first which is the source activity, and activity_second which is the destination activity."
+            android:text="Purpose to visit"
             android:textSize="16dp"
 
             />

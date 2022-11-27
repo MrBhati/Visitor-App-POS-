@@ -9,6 +9,7 @@ import com.mrbhati.vizitors.Model.UpdateVisitorRequest;
 import com.mrbhati.vizitors.Model.UserRequest;
 import com.mrbhati.vizitors.Model.VisitDetailsModel;
 import com.mrbhati.vizitors.Model.VisitModel;
+import com.mrbhati.vizitors.Model.VisitSearchResponse;
 import com.mrbhati.vizitors.Model.VisitorDetailsModel;
 import com.mrbhati.vizitors.Model.VisitorModel;
 import com.mrbhati.vizitors.Model.dashboardModel;
@@ -27,7 +28,7 @@ import retrofit2.http.Query;
 
 public interface Api {
 
-    String BASE_URL = "https://simplifiedcoding.net/demos/";
+
 
     /**
      * The return type is important here
@@ -79,5 +80,10 @@ public interface Api {
     @POST("visitor/{id}")
     @Headers({"Content-Type: application/json","Accept: application/json"})
     Call<AddVisitResponse> updateVisitor(@Body UpdateVisitorRequest updateVisitorRequest, @Header("Authorization") String token, @Path("id") String id);
+
+
+    @GET("visitor/search/{number}")
+    @Headers({"Content-Type: application/json","Accept: application/json"})
+    Call<VisitSearchResponse> getVisitorSearchResult(@Header("Authorization") String token, @Path("number") String id);
 
 }
